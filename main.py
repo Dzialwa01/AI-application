@@ -4,8 +4,8 @@ from openai import OpenAI
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-# if not api_key:
-#     raise ValueError("Open api key not found from env file")
+if not api_key:
+    raise ValueError("Open api key not found from env file")
 
 def get_response(prompt):
     client = OpenAI(api_key = api_key)
@@ -71,7 +71,7 @@ print(get_response(sys_prompt, user_prompt))
 # Build a Teaching Bot
 
 client = OpenAI (api_key = api_key) # creating an instance of the OpenAI library. Line is basically creating a connection to the OpenAI's server using the API key.
-
+""
 while True:
     user_input = input("\nAsk a question (or tyoe 'exit'): ")
 
