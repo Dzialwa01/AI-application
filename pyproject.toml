@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "bs4>=0.0.2",
+    "datasets>=5.0.0",
     "dotenv>=0.9.9",
     "gradio>=6.13.0",
     "huggingface-hub>=1.12.0",
